@@ -1,0 +1,41 @@
+.file-tree-view {
+  background: #2B2D31;
+  border-radius: 16px;
+  padding: 14px 18px 16px;
+  position: relative;
+  box-shadow:
+    0 6px 0 #1A1C1F,
+    0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* macOS-style window dots */
+.file-tree-view::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FF5F57;
+  box-shadow: 16px 0 0 #FEBC2E, 32px 0 0 #28C840;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.file-tree-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 6px;
+}
+
+.file-tree-pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #A8D8A8;
+  white-space: pre;
+}

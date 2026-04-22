@@ -1,0 +1,196 @@
+/* Duolingo-style feedback — bottom result panel */
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* Scrollable upper content */
+.feedback__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 20px 20px;
+  overflow-y: auto;
+}
+
+/* Answer comparison card */
+.feedback__answer-card {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedback__answer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feedback__answer-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.feedback__code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 10px;
+}
+
+.feedback__code--correct {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border: 2px solid #8EE000;
+}
+
+.feedback__code--wrong {
+  background: var(--red-light);
+  color: var(--red-dark);
+  border: 2px solid #FF9999;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.feedback__code--show {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border: 2px solid #8EE000;
+}
+
+/* After file tree */
+.feedback__after {
+  /* inherits FileTreeView styles */
+}
+
+/* ── Bottom result panel (Duolingo style) ── */
+.feedback__panel {
+  border-radius: 24px 24px 0 0;
+  padding: 0;
+  animation: slideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.feedback__panel--correct {
+  background: var(--green-light);
+  border-top: 3px solid #8EE000;
+}
+
+.feedback__panel--wrong {
+  background: var(--red-light);
+  border-top: 3px solid #FF9999;
+}
+
+.feedback__panel-inner {
+  padding: 22px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback__result-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.feedback__result-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feedback__panel--correct .feedback__result-icon {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 3px 0 var(--green-dark);
+}
+
+.feedback__panel--wrong .feedback__result-icon {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 3px 0 var(--red-dark);
+}
+
+.feedback__result-texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feedback__result-title {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.feedback__panel--correct .feedback__result-title { color: var(--green-dark); }
+.feedback__panel--wrong  .feedback__result-title { color: var(--red-dark); }
+
+.feedback__hint-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.feedback__explanation {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Continue button */
+.feedback__continue-btn {
+  max-width: 100% !important;
+  border-radius: 16px !important;
+}
+
+.feedback__continue-btn--correct {
+  background: var(--green) !important;
+  color: white !important;
+  box-shadow: 0 5px 0 var(--green-dark) !important;
+}
+.feedback__continue-btn--correct:active {
+  box-shadow: 0 2px 0 var(--green-dark) !important;
+}
+
+.feedback__continue-btn--wrong {
+  background: var(--red) !important;
+  color: white !important;
+  box-shadow: 0 5px 0 var(--red-dark) !important;
+}
+.feedback__continue-btn--wrong:active {
+  box-shadow: 0 2px 0 var(--red-dark) !important;
+}

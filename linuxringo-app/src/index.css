@@ -1,0 +1,56 @@
+/* LinuxRingo — Global base (Duolingo-style light theme) */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Brand colors */
+  --green:       #58CC02;
+  --green-dark:  #46A302;
+  --green-light: #D7FFB8;
+  --blue:        #1CB0F6;
+  --blue-dark:   #0099D9;
+  --blue-light:  #DDF4FF;
+  --red:         #FF4B4B;
+  --red-dark:    #EA2B2B;
+  --red-light:   #FFE0E0;
+  --yellow:      #FFC800;
+  --yellow-dark: #E6B800;
+  --orange:      #FF9600;
+  --orange-dark: #E68600;
+  --orange-light:#FFF0CC;
+  --purple:      #CE82FF;
+
+  /* Neutrals */
+  --bg:          #F7F7F7;
+  --white:       #FFFFFF;
+  --text:        #3C3C3C;
+  --text-light:  #777777;
+  --border:      #E5E5E5;
+  --border-dark: #AFAFAF;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4 { margin: 0; }
+p { margin: 0; }
+button { font-family: inherit; cursor: pointer; }
+code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+

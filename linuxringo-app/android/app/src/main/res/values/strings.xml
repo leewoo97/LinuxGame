@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LinuxRingo</string>
+    <string name="title_activity_main">LinuxRingo</string>
+    <string name="package_name">com.linuxringo.app</string>
+    <string name="custom_url_scheme">com.linuxringo.app</string>
+</resources>

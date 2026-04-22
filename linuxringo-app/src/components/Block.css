@@ -1,0 +1,81 @@
+/* Duolingo-style word block */
+.block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: 12px;
+  border: 2px solid;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s;
+  user-select: none;
+  white-space: nowrap;
+  background: var(--white);
+}
+
+.block:not(:disabled):active {
+  transform: translateY(3px);
+}
+
+/* Command: blue */
+.block--command {
+  color: var(--blue-dark);
+  border-color: #84D8FB;
+  box-shadow: 0 4px 0 #84D8FB;
+}
+.block--command:hover {
+  background: var(--blue-light);
+}
+.block--command:active {
+  box-shadow: 0 1px 0 #84D8FB;
+}
+
+/* Option: orange */
+.block--option {
+  color: var(--orange-dark);
+  border-color: #FFCF67;
+  box-shadow: 0 4px 0 #FFCF67;
+}
+.block--option:hover {
+  background: var(--orange-light);
+}
+.block--option:active {
+  box-shadow: 0 1px 0 #FFCF67;
+}
+
+/* Path/filename: green */
+.block--path {
+  color: var(--green-dark);
+  border-color: #8EE000;
+  box-shadow: 0 4px 0 #8EE000;
+}
+.block--path:hover {
+  background: var(--green-light);
+}
+.block--path:active {
+  box-shadow: 0 1px 0 #8EE000;
+}
+
+/* Input area: selected state with × indicator */
+.block--input {
+  padding-right: 28px;
+  position: relative;
+  opacity: 0.85;
+}
+.block--input::after {
+  content: '×';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-family: system-ui;
+  font-weight: 900;
+  opacity: 0.45;
+}
+.block--input:hover::after {
+  opacity: 0.9;
+}

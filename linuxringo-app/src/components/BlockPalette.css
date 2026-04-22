@@ -1,0 +1,7 @@
+.block-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 52px;
+  padding: 4px 0 8px;
+}

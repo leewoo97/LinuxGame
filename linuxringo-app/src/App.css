@@ -1,0 +1,81 @@
+/* LinuxRingo — App-level + shared button styles */
+
+.app {
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+/* ── Shared Duolingo-style 3D buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 16px;
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s, filter 0.08s;
+  font-family: inherit;
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: translateY(3px);
+}
+
+/* Green primary — Duolingo signature */
+.btn--primary {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 5px 0 var(--green-dark);
+}
+.btn--primary:not(:disabled):active {
+  box-shadow: 0 2px 0 var(--green-dark);
+}
+.btn--primary:not(:disabled):hover {
+  filter: brightness(1.06);
+}
+
+/* White secondary */
+.btn--secondary {
+  background: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--border);
+  box-shadow: 0 5px 0 var(--border-dark);
+}
+.btn--secondary:not(:disabled):active {
+  box-shadow: 0 2px 0 var(--border-dark);
+}
+.btn--secondary:not(:disabled):hover {
+  background: var(--blue-light);
+}
+
+/* Danger */
+.btn--danger {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 5px 0 var(--red-dark);
+}
+.btn--danger:not(:disabled):active {
+  box-shadow: 0 2px 0 var(--red-dark);
+}
+
+/* Large full-width */
+.btn--lg {
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 340px;
+}
+
