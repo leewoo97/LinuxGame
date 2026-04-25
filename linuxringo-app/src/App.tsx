@@ -4,6 +4,7 @@ import HomeScreen from "./screens/HomeScreen";
 import QuizScreen from "./screens/QuizScreen";
 import FeedbackScreen from "./screens/FeedbackScreen";
 import SessionCompleteScreen from "./screens/SessionCompleteScreen";
+import SplashScreen from "./screens/SplashScreen";
 import type { Problem } from "./types/problem";
 import './App.css'
 
@@ -26,6 +27,7 @@ function App() {
   const [lastCorrect, setLastCorrect] = useState(false);
   const [lastProblem, setLastProblem] = useState<Problem | null>(null);
   const [activeTopic, setActiveTopic] = useState<string | undefined>(undefined);
+  const [showSplash, setShowSplash] = useState(true);
 
   function handleStart(topic?: string) {
     setActiveTopic(topic);
@@ -61,6 +63,7 @@ function App() {
 
   return (
     <div className="app">
+      {showSplash && <SplashScreen onDone={() => setShowSplash(false)} />}
       {screen === "home" && (
         <HomeScreen totalCompleted={totalCompleted} onStart={handleStart} />
       )}

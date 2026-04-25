@@ -22,13 +22,6 @@ export default function HomeScreen({ totalCompleted, onStart }: Props) {
 
   return (
     <div className="home">
-      {/* Header */}
-      <header className="home__header">
-        <div className="home__logo">🐧</div>
-        <h1 className="home__title">LinuxRingo</h1>
-        <p className="home__sub">리눅스 명령어를 게임처럼 배워보세요</p>
-      </header>
-
       {/* Stats row */}
       <div className="home__stats">
         <div className="home__stat home__stat--streak">
